@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* flex布局：通过主轴从左往右 副轴从上往下 分割网页后布局 */
+        .flex{
+            /* 使用flex布局 */
+            display: flex;
+
+            /* 设置主轴方向 */
+            font-display: row;      /*行 默认从左往右*/
+            /*column列 row-reverse行反转 column-reverse列反转*/
+
+            /* 设置主轴对齐方式 */
+            justify-content: flex-start;    /*默认起点对齐 左上*/
+            /* flex-end终点对齐右下 space-between两端对齐 space-around均分对齐 */
+
+            /* 设置副轴对齐 */
+            align-items: center;    /*居中*/
+            /* flex-start靠起点 flex-end靠终点 */
+
+            /* 设置换行 */
+            flex-wrap: nowrap;      /*缩放不换行*/
+            /* wrap换行 */
+        }
+        .box3{
+            /* 项目属性 */
+            order: -1;   /*默认0 值越小 越靠前*/
+        }
+    </style>
+</head>
+<body>
+    <div class="flex">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+    </div>
+</body>
+</html>
