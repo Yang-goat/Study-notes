@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>手机商城</title>
+    <style>
+        /* 页面背景设置 */
+        body{
+            background-color: #f5f5f5;
+        }
+        /* 顶部盒子 */
+        .top{
+            height: auto;
+            margin: 20px 10px 10px;
+            border-bottom: 1px solid rgb(220, 220, 220);
+            /* 设置弹性盒子 */
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        .top h2{
+            width: 100px;
+            margin: 0;
+        }
+        .top a{
+            width: auto;
+        }
+        /* 单个商品的盒子 */
+        .goods{
+            width: 300px;
+            height: 380px;
+            display: inline-block;
+            background-color: #fff;
+            font-size: 14px;
+            text-align: center;
+            margin: 4px;
+            box-shadow: 4px 4px 5px #b6b6b6;
+        }
+        /* 链接初始化 */
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        /* 商品图片大小 */
+        .goods img{
+            width: 260px;
+        }
+        /* 文字设置 */
+        span{
+            color: #999;
+            font-size: 9px;
+        }
+        .newmoney{
+            font-size: 16px;
+            color: red;
+        }
+        .oldmoney{
+            text-decoration:line-through;
+            font-size: 7px;
+        }
+        .small{
+            color: red;
+        }
+        /* 下方红框 */
+        .smalldiv{
+            display: inline-block;
+            width: auto;
+            height: auto;
+            padding: 0px;
+            border-width: 1px;
+            border-style: solid;
+            border-radius: 5px;
+            border-color: red;
+        }
+        /* 放大效果 */
+        .goods:hover{
+            transform: scale(1.05);
+            transition: 0.5s;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="top">
+        <h2>甄选推荐</h2>
+        <a href="https://www.vmall.com/portal/activity/index.html?pn=huaweizonePC" target="_blank">更多 ></a>
+    </div>
+    <a href="https://www.vmall.com/product/10086238622707.html" target="_blank">
+        <div class="goods">
+            <img src="https://res.vmallres.com/cmscdn/CN/2023-01/ddf4b925c4f84fe692817d2a23813aaf.png" alt="huawei mate 50 pro">
+            <h3>HUAWEI Mate 50 Pro</h3>
+            <p><span class="des">超光变XMAGE影像 | 北斗卫星消息</span></p>
+            <p><span class="newmoney">¥6799起</span></p>
+            <div class="smalldiv">
+                    <span class="small">6期0分期利息 | 现货速发</span>
+            </div>
+        </div>
+    </a>
+    <a href="https://www.vmall.com/product/10086747956165.html" target="_blank">
+        <div class="goods">
+            <img src="https://res.vmallres.com/cmscdn/CN/2023-01/b18b79288cb14721b9aed57448b1c6eb.png" alt="huawei watch 3 pro new">
+            <h3>HUAWEI WATCH 3 Pro new<br></h3>
+            <p><span class="des">血氧体温检测 | 呼吸健康研究</span></p>
+            <p><span class="newmoney">¥2499</span><span class="oldmoney">¥2999</span></p>
+            <div class="smalldiv">
+                <span class="small">体温检测|血氧监测|限时省500元</span>
+            </div>
+        </div>
+    </a>
+    <a href="https://www.vmall.com/product/10086618122510.html" target="_blank">
+        <div class="goods">
+            <img src="https://res.vmallres.com/cmscdn/CN/2023-01/402d86f628ae4c3d86297f59ffa213df.png" alt="huawei matebook x pro">
+            <h3>HUAWEI MateBook X Pro</h3>
+            <p><span class="des">3.1k原色全面屏 | 12代酷睿处理器</span></p>
+            <p><span class="newmoney">¥10199</span><span class="oldmoney">¥10999</span></p>
+            <div class="smalldiv">
+                <span class="small">限时直降800元</span>
+            </div>
+            <div class="smalldiv">
+                <span class="small">12期免息</span>
+            </div>
+            <div class="smalldiv">
+                <span class="small">赠积分</span>
+            </div>
+        </div>
+    </a>
+    <a href="https://www.vmall.com/product/10086304972824.html" target="_blank">
+        <div class="goods">
+            <img src="https://res.vmallres.com/cmscdn/CN/2023-01/6f3ed676093e475ba06510d87bfebd26.png" alt="matepad pro 11英寸">
+            <h3>MatePad Pro 11英寸</h3>
+            <p><span class="des">120Hz OLED原色全面屏</span></p>
+            <p><span class="newmoney">¥3199</span><span class="oldmoney">¥3499</span></p>
+            <div class="smalldiv">
+                <span class="small">限时优惠300元 | 享12期0分期利率</span>
+            </div>
+        </div>
+    </a>
+</body>
+</html>

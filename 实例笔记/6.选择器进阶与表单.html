@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* 伪类选择器 */
+        img:hover{    /*鼠标经过悬停时触发*/
+            transform: scale(1.5);
+            transition: 1s;
+        }
+        img:active{   /*按下元素时触发*/
+            color: black;
+        }
+        a:visited{  /*a标签被访问时触发*/
+            color: blue;
+        }
+        a:link{     /*a标签未被访问时触发*/
+            color: tomato;
+        }
+        /* 爱恨准则 LOVEHATE */
+        /* 按照这个顺序:link>:visited>:hover>:active 否则不生效 */
+        
+        /* 伪元素选择器 */
+        /* 创建虚拟元素 性能好安全性更好简化html结构 */
+        .txt::before{
+            content: '喜羊羊'   /*必须有content属性样式伪元素才会激活*/
+        }
+        .txt::after{
+            content: '!!!';
+        }
+
+
+        /* 结构选择器 */
+        /* 对父类的所有子标签计数 若下标所指的标签不是目标标签则不生效 */
+        p:first-child{          /*选择首个*/
+            color: red;
+        }
+        p:nth-child(2){         /*选择下标指定*/
+            color: orange;
+        }
+        p:last-child{           /*选择最后*/
+            color: blue;
+        }
+        p:nth-last-child(3){    /*选择倒数下标指定*/
+            color: green;
+        }
+        /* 忽略非目标标签计数 */
+        p:only-of-type(3){
+            color: blanchedalmond;
+        }
+        /* odd奇数even偶数 */
+    </style>
+</head>
+<body>
+    <img src="./img/图片1.jpg" alt="梅花" width="300">
+    <a href="5.浮动定位.html">点击打开浮动定位笔记</a>
+
+    <span class="txt">是大帅哥</span>
+
+    <!-- 快接键：p{我是$仙女}*7 -->
+    <p>我是1仙女</p>
+    <p>我是2仙女</p>
+    <p>我是3仙女</p>
+    <p>我是4仙女</p>
+    <p>我是5仙女</p>
+    <p>我是6仙女</p>
+    <p>我是7仙女</p>
+    <hr>
+    
+    <!-- 表单 -->
+    <form action="url" method="get/post">   <!--action设置要将表单提交到何处（默认为当前页面）method设置使用哪种 HTTP 方法来提交表单数据（默认为 get）-->
+        <!-- from的功能控件 与label标签 -->
+        <!-- label标签常做标题 点击标签时跳到指向的控件 -->
+        <!-- input -->
+        <label>账号：
+        <input type="text" name="设置控件名" placeholder="请输入账号"><!--文本框-->
+        </label><br>
+        <label for="password">密码：</label>    <!--for属性表示控件服务对象-->
+        <input type="password" id="password"><br><!--密码框-->
+        <input type="checkbox" value="1">       <!--多选框-->
+        <input type="radio" value="1"><br>      <!--单选框 基于name判断-->
+
+        <input type="submit">                   <!--提交按钮-->
+        <input type="file" required>            <!--文件上传-->
+        <input type="reset"><br>                <!--重置表达内容-->
+        <input type="url">                      <!--网址输入框-->
+
+        <textarea name="txt" id="" cols="30" rows="10"></textarea><!--文本域-->
+        <select name="" id="">          <!--下拉选项框-->           
+            <option value="1">1</option>
+            <option value="2">2</option>
+        </select>
+        <button>按我拯救世界</button>   <!--按钮-->
+
+
+    </form>
+</body>
+</html>

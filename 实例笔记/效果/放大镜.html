@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>放大镜</title>
+    <style>
+        .album{
+            margin: 100px auto;
+            padding: 20px;
+            text-align: center;
+            width: 600px;
+            height: 580px;
+            background-color: red;
+        }
+        .album img{     /*表示选中album中所有img标签*/
+            width: 200px;
+            height: 190px;
+        }
+        /* 伪类选择器  通过样式的方法给标签添加属性效果 当鼠标经过Img图片就触发里的代码 */
+        .album img:hover{
+            transform: scale(1.5);/*transfrom变形标签 scale缩放*/
+            transition: 1s;/*延长过程时间*/
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="album">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+    </div>
+</body>
+</html>

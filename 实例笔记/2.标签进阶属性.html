@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>标签进阶</title>
+</head>
+<body>
+    <!-- 通用属性 -->
+    <p style="color:green">666</p><!--style设置标签的行内样式 配合css样式-->
+    <p title="6翻了">999</p><!--标题 鼠标放上去显示的内容-->
+    <p id="a">123</p><!-- 给标签取唯一的名字 若重复则以前面的为准 -->
+    <hr>
+    <!-- 图片标签 -->
+    <!-- <img src="图片路径" alt="图片描述" width="宽度" height="高度" title="标题"> -->
+    <img src="./img/图片1.jpg" alt="樱花" width="400"><!--绝对路径与相对路径 网络图片一般用绝对路径-->
+    <hr>
+    <!-- 超链接标签 -->
+    <!-- <a href="链接的路径" target="打开网页的方式 _blank另开网页 _self覆盖原网页" title="">点我</a> -->
+    <a href="基本框架及标签.html" target="_blank">点我打开第一课网页</a>
+    <!-- 锚点 给元素设置id(不以数字开头) 通过herf="#id"跳转到网页相应位置 -->
+    <p id="b">666</p>
+    <a href="#b" target="">666</a>
+    <hr>
+    <!-- 无序列表 -->
+    <!-- type:square方块 disc实心圆点 circle空心圆点 none不显示符号 -->
+    <ul type="circle">王者荣耀
+        <li>亚瑟
+            <p>战士</p>
+        </li>
+        <li>海月</li>
+    </ul><!-- ui后只能跟li标签 li后随意 如ul嵌套 -->
+    <hr>
+    <!-- 有序列表 -->
+    <!-- type:a A i小写罗马数字 I大写罗马数字 1(默认) -->
+    <ol type="1" reversed>排名<!-- reversed倒序 -->
+        <li>小王</li>
+        <li>小明</li>
+    </ol>
+    <hr>
+    <!-- 自定义列表 -->
+    <!-- dd,dt标签同级 dd描述dt dd可多个 dl子标签只能为dt,dd -->
+    <dl>
+        <dt>1</dt>
+        <dd>2</dd>
+        <dd>2</dd>
+    </dl>
+    <hr>
+    <ol>vscode快捷键
+        <li>标签名*x：快速生成x个标签</li>
+        <li>ul>li*x：快速生成有x个li的无序列表</li>
+        <li>alt+shift+&uarr;/&darr;：快速复制当前行</li>
+    </ol>
+</body>
+</html>

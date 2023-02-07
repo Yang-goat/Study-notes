@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    /* 清除网页自带的内外边框 */
+    *{
+        margin: 0px; /* 外边距 */
+        padding: 0px; /* 内边距 */
+    }
+    .box{
+        /* 设置盒子大小 */
+        width: 300px; /*默认浏览器100%*/
+        height: 300px; /*默认内容高度*/
+        /* 背景颜色 */
+        background-color: rgb(255, 0, 191);
+        /* 快速书写：w300+h300+bgc */
+
+        /* 背景图片 */
+        background-image: url(./img/图片1.jpg);
+        /* 调整图片位置 */
+        background-position: left;
+        /* 设置背景大小 */
+        background-size: cover; /* 等比缩放 */
+        /* 设置背景图片不重复 */
+        background-repeat: no-repeat;
+        /* 背景图片复合写法 */
+        /* background: url()/color size position; */
+
+        /* 阴影 */
+        box-shadow: 4px -4px 50px #b6b6b6; /*偏右值 偏下值 虚化平铺范围 颜色*/ 
+    }
+    .box1{
+        /* 边距设置 */
+        padding: 10px;
+        /* 1值:上下左右 2值:上下,左右 3值:上,左右,下 4值:上,右,下,左 */
+        margin: 10px auto;/*auto居中*/
+        margin-top: 10px; /* 单独设置 */
+
+        /* 边框设置 */
+        /* 粗细 */
+        border-width: 5px;
+        /* 颜色 */
+        border-color: red;
+        /* 样式 */
+        border-style: none;
+        /* none无样式 solid实线 double双实线 dashed虚线 dotted点线 */
+        /* 弧度 */
+        border-radius: 15px;
+        /* 复合写法 */
+        border: 1px solid #069; /*粗细 样式 颜色*/
+        /* 单个边框设置 */
+        border-top: 0px;
+
+        /* 内容大小设置 */
+        width: 100px;
+        height: 100px;
+        /* 溢出处理 */
+        overflow: scroll; /*hidden隐藏 visible正常显示(默认) scroll滚动显示 auto浏览器自动(一般为scroll) */
+    }
+</style>
+<body>
+    <div class="box">
+        行内元素、块元素、行内块元素的区别
+        查看与设置元素类型：display
+    </div>
+    <div class="box1">
+        <img src="./img/美杜莎图片.jpg" alt="">
+    </div>
+</body>
+</html>

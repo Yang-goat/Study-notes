@@ -1,0 +1,19 @@
+.webo{
+    color: black;
+    /* 大小 */
+    font-size: 70px;
+    /* 缩进 */
+    text-indent: 2em;
+    /* 设置字体 */
+    font-family: 'SimSun';
+    /* 粗细 */
+    font-weight: 100;
+    /* 字体样式 */
+    font-style: italic;/*倾斜*/
+    /* 行高 */
+    line-height: 30px;
+    /* 对齐 */
+    text-align: center;
+    /* 文本样式 */
+    text-decoration: none;/*划线 none可清除链接的下划线*/ 
+}

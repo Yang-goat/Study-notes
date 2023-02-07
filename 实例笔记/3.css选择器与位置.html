@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 内部样式 -->
+    <!-- css选择器 -->
+    <style>
+        /* 标签选择器 清除样式*/
+        p{
+            color: blanchedalmond;
+        }
+        /* id选择器 唯一*/
+        #wfw{
+            color: red;
+        }
+        /* 类class选择器 可重复*/
+        .sss{
+            color:aqua;
+        }
+        /* 通过符选择器 表示选中网页所有元素 清除样式时使用*/
+        *{
+            list-style: none;
+        }
+        
+        /* 进阶选择器 */
+        /* 并集选择器 */
+        ul, li{
+            /* 选择多个目录 */
+            margin: 0;
+        }
+        /* 后代选择器 */
+        .wfw p{
+            /* 选择wfw中所有p标签 */
+            margin: 0; 
+        }
+        /* 子代选择器 */
+        .wfw > p{
+            /* 选择wfw子标签中的p */
+            margin: 0;
+        }
+
+        /* division盒子标签 */
+        div{
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+        }
+    </style>
+    <!-- 外部样式 -->
+    <link rel="stylesheet" href="./css/外部样式.css">
+</head>
+<body>
+    <p>66666</p>
+    <p id="wfw">id唯一</p>
+    <p class="sss hio">一个标签可有多个类名，空格隔开</p>
+    <p class="zh">外部样式</p>
+    <!-- 行内样式 -->
+    <p style="color: green; ">qwertyuiop[]\</p>
+    <div>asdfghjkl;'</div>
+</body>
+</html>

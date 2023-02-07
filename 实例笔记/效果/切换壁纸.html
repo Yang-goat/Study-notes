@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>柯南壁纸切换</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul,li{
+           list-style: none ;/*清除样式*/ 
+        }
+        .mi{/*设置表面的大盒子*/
+            width: 700px;
+            height: 700px;
+            margin: 50px auto ;
+            border: 3px solid red;
+        }
+        .phone{/*设置手机盒子*/
+            width: 200px;
+            height: 450px;
+            margin: 20px auto;
+            border: 3px solid black;
+            border-radius: 30px;
+            background: url(https://p0.itc.cn/images01/20210906/61cbac5f4d054e3e8fb1dbcc68a58af2.jpeg
+)center/cover;
+        }
+        .album{
+            width: 560px;
+            height: 80px;
+            margin: 50px auto;
+            background-color: aqua;
+        }
+        .wallpage{
+            display:inline-block;
+            margin: 15px 10px;/*上下 左右距离*/
+            width: 50px;
+            height: 50px;
+            border: 2px solid black;
+            border-radius: 10px;
+            background: url(https://p0.itc.cn/images01/20210906/eb64b3a502644e3f8740d42e67b71017.jpeg)center/cover;
+        }
+        /*结构选择器 如果有一堆选择器对象 可以让你选择指定的值 你要选择第几个元素*/
+        /*从二开始进行选择 换背景*/
+        .wallpage:nth-child(2){
+            background: url(https://p1.itc.cn/images01/20210906/8671e7755c6142ea871a3a2c3b18d9a9.jpeg)center/cover;
+        }
+        .wallpage:nth-child(3){
+            background: url(https://p3.itc.cn/images01/20210906/cdebce37836142d2a46caddfb6874e11.jpeg)center/cover;
+        }
+        .wallpage:nth-child(4){
+            background: url(https://p9.itc.cn/images01/20210906/dee943969b954835bb06e78d1ab68517.jpeg)center/cover;
+        }
+        .wallpage:nth-child(5){
+            background: url(https://p1.itc.cn/images01/20210906/77862e2263f245deb7561233d9df5692.jpeg)center/cover;
+        }
+        .wallpage:nth-child(6){
+            background: url(https://p6.itc.cn/images01/20210906/6865c0eaa51647cc8c4fcb81e31a4577.jpeg)center/cover;
+        }
+        .wallpage:nth-child(7){
+            background: url(https://p7.itc.cn/images01/20210906/252e2e5cd61140118c64cf0ea6721ab9.jpeg)center/cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="mi">
+        <div class="phone"></div>
+        <ul class="album">
+            <li class="wallpage"></li>
+            <li class="wallpage"></li>
+            <li class="wallpage"></li>
+            <li class="wallpage"></li>
+            <li class="wallpage"></li>
+            <li class="wallpage"></li>
+            <li class="wallpage"></li>
+        </ul>
+    </div>
+    <!-- https://www.bootcdn.cn/
+    这个案例用到一个叫jquery的js插件 这个插件需要引入 这个js文件是网络文件有网就可以使用 cdn网络引入 -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        //给壁纸绑定一个点击事件 当我的鼠标点击壁纸的时候 触发一个功能
+        //当我点击图片发生的事情?? 点击小图片更换手机里的壁纸
+        //this 当前点击的壁纸
+        //把手机里的壁纸图片 换成我当前点击的壁纸图片
+        $('.wallpage').click(function(){
+            $('.phone').css('background-image',$(this).css('background-image'))
+        })
+    </script>
+    <!-- 
+        思路:
+1.大盒子 ok 
+2.手机盒子 ok 
+3.相册盒子 ok 
+4.小图片 ok 
+5.js点击事件 -->
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* 文档流式布局 */
+        /* 见前面 display: inline-block */
+
+
+        /* 浮动布局 */
+        /* 特点 无解析空格 一行排列不下自动换行  脱离文档流 */
+        /* 注意 会脱离文档流易产生父元素高度塌陷  解决方法 定父元素高 为父元素设置overflow:hidden*/
+        .float{
+            height: 300px;
+            border: 10px solid blue;
+        }
+        .float1{
+            float: left;
+            height: 200px;
+            width: 200px;
+            background-color: yellow;
+        }
+        .float2{
+            float: left;
+            height: 200px;
+            width: 200px;
+            background-color: red;
+        }
+        .float3{
+            float: left;
+            height: 200px;
+            width: 200px;
+            background-color: green;
+        }
+
+        /* 定位布局 position */
+        /* 相对定位 */
+        .relation{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: rgb(0, 179, 255);
+            /* 保持文档流同时 通过方位属性 对原位置偏移 */
+            top: 50px;
+            left: 50px;
+            /* 不设置偏移值无变化 */
+        }
+        /* 绝对定位 */
+        .absolute{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: rgb(115, 0, 128);
+            /* 脱离文档流 使用方位属性相对与最近的有定位的父级元素进行偏移(就近原则) */
+            /* 一般与相对定位配合使用(参照物) */
+            top: 10px;
+        }
+        /* 固定定位 */
+        .fixed{
+            position: fixed;
+            width: 70px;
+            height: 200px;
+            background-color: rgb(68, 255, 0);
+            /* 固定元素在浏览器可视位置 */
+            top: 30%;
+            right: 0;
+        }
+
+        /* 偏移量设置：左上优先级高 */
+        /* z-index: 值; 值越大越靠前 值相同后者靠前 */
+    </style>
+</head>
+<body>
+    <!-- 浮动布局 -->
+    <div class="float">
+        <div class="float1"></div>
+        <div class="float2"></div>
+        <div class="float3"></div>
+    </div>
+
+    <!-- 定位布局 -->
+    <div class="relation">
+        <div class="absolute"></div>
+    </div>
+    <div class="fixed"></div>
+</body>
+</html>
