@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 写body最后 -->
+    <!-- 内部书写位置 -->
+    <script>
+        document.write(666)
+    </script>
+    <!-- 外部书写位置 -->
+    <script src="js/外部.js"></script>
+
+    <script>
+        //单行注释
+        /*多行注释*/
+
+        // 输出       
+        document.write(666, '<i>哈哈哈</i>')// 网页输出 字符串要引号包裹 数字不用，标签可被识别
+        console.log(666)    // 控制台输出 用于测试js数据
+        alert('999')        // 弹窗
+
+        // 输入
+        prompt('请输入您的姓名')
+
+        // 变量
+        // 禁止数字开头 严格区分大小写
+        var a           // 声明符 标识符
+        let b ='fwe'    //es6新出 在作用域中比var更严谨
+        console.log(typeof b)   //typeof查看数据类型
+
+        // 数据类型
+        // 字符串 String    用 "" '' ``(反引号，作为模板字符串类f-str)包裹
+        console.log(`jfeiwo${b}`)
+        // 数值 Number      不分整数、浮点数等
+        // 布尔 Boolean     值：true/false首字母不大写
+        // 未定义 Undefined 声明的变量未赋值时值和类型均为未定义
+        // 空 Null          值为空
+
+        // 转义字符
+        // \n换行 \t制表符 \\输出斜杠 \'输出引号
+
+        // 数据类型转换
+        // 隐式转换
+        //字符串与数值进行运算时 +会优先识别为拼接
+        console.log(1 + '1')    //'11'
+
+        // 强制转换
+        Number('31')    //若失败则返回NaN(也是number类型)
+        String(4213)
+        Boolean(25)     //有值为真 无值为假(0,-0,null,undefined)
+    </script>
+</body>
+</html>
